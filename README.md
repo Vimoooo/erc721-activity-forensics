@@ -11,7 +11,7 @@ TRANSFER_TOPIC = Web3.keccak(
     text="Transfer(address,address,uint256)"
 ).hex()
 
-def decode_address(topic):
+def decode_address():
     return Web3.to_checksum_address(
         "0x" + topic.hex()[-40:]
     )
